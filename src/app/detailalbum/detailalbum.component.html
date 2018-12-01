@@ -1,0 +1,14 @@
+<div *ngIf="album">
+  <h1>{{album.name}}</h1>
+  <img src="{{album.images[0].url}}" width=500  >
+  <ul *ngFor="let morceau of album.tracks.items; let i=index" style="list-style: none;">
+    <li>
+      {{morceau.name}}
+      <audio *ngIf="morceau.preview_url != null" id=”AudioSong” controls [src]="morceau.preview_url">pas supporté</audio>
+      <button (click) ="openDialog(morceau.uri);">ajouter a une playlist</button>
+    </li>
+  </ul>
+  
+</div>
+
+

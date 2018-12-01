@@ -1,0 +1,22 @@
+<form #rechChanteurs="ngForm" (ngSubmit)="chercherChanteur(rechChanteurs.value.recherche)">
+    <h1>Recherche d'un chanteur</h1> 
+    <mat-form-field>
+      <input matInput type="text" placeholder="recherche" ngModel name="recherche" required>
+    </mat-form-field>
+    <input type="submit" value="Valider">
+  </form>
+  
+  
+  <mat-grid-list cols="3">
+    <mat-grid-tile *ngFor="let chanteur of artistes; let i=index">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{chanteur.name}}</mat-card-title>
+        </mat-card-header>
+        <img *ngIf="chanteur.images!=0" src="{{chanteur.images[2].url}}">
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  
+  
+  

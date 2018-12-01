@@ -1,0 +1,14 @@
+<div *ngIf="playlist">
+    <h1>{{playlist.name}}</h1>
+    <ul *ngFor="let morceau of playlist.items; let i=index" style="list-style: none;">
+      <li>
+        {{morceau.track.name}}
+        <audio *ngIf="morceau.track.preview_url != null" id=”AudioSong” controls [src]="morceau.track.preview_url">pas supporté</audio>
+        <button (click)="supprimerTrackPlaylist(i,morceau.track.uri)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </li>
+    </ul>
+  
+  </div>
+  
