@@ -1,4 +1,4 @@
-## Précision du collaborateur
+# Précision du collaborateur
 A l'attention de mr Pecatte : Geoffrey Saint Germain est en collaborateur car nous n'avons pas pu se déconnecter de son compte git sur notre ordinateur commun c'est donc sur son compte que j'ai push mon projet bien que ce soit moi qui l'ai réalisé.
 
 # Spotify
